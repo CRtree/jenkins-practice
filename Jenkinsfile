@@ -3,10 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'mvn clean package'
                 sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
+                    java -jar target/jekins-practice-0.0.1-SNAPSHOT.jar
                 '''
             }
         }
