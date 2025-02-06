@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "Hello World1"'
                 sh 'mvn clean package'
                 sh '''
                     java -jar target/jekins-practice-0.0.1-SNAPSHOT.jar
